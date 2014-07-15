@@ -43,6 +43,8 @@
   <script src="js/jquery.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+
+  @yield('scripts')
 </head>
 
 <body>
@@ -52,22 +54,44 @@
   		</div>
   		<hr/>
   		<div class="side-item">
-  			<a href="http://harvard-3-128541.use1-2.nitrousbox.com:4000/">
+  			<a href="http://php-harvardp3.rhcloud.com/">
   				<paper-ripple></paper-ripple>
   				<core-icon icon="home"></core-icon>Home
   			</a>
   		</div>
+
+      <div class="side-item">
+        <a href="http://php-harvardp3.rhcloud.com/lorem">
+          <paper-ripple></paper-ripple>
+          <core-icon icon="text-format"></core-icon>Lorem Ipsum
+        </a>
+      </div>
+
+      <div class="side-item">
+        <a href="http://php-harvardp3.rhcloud.com/user">
+          <paper-ripple></paper-ripple>
+          <core-icon icon="account-circle"></core-icon>User Generator
+        </a>
+      </div>
+
+      <div class="side-item">
+        <a href="https://github.com/mkaminsky11/harvard-p3">
+          <paper-ripple></paper-ripple>
+          <core-icon icon="info-outline"></core-icon>GitHub page
+        </a>
+      </div>
+
   	</div>
     <div id="detect" style="display:none"></div>
 
 
     <core-toolbar id="mainheader">
       <paper-icon-button icon="menu" style="color:white !important" onclick="toggle_side()"></paper-icon-button>
-      <span flex>@yield("title","")</span>
+      <span flex>@yield("title","Home")</span>
       <paper-icon-button id="searchbutton" icon="help" style="color:white !important"></paper-icon-button>
     </core-toolbar>
 
-    <div class="content_main">
+    <div class="content_main" style="text-align: center">
       @yield('content')
     </div>
   <script src="js/main.js"></script>

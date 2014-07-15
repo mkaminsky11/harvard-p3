@@ -15,3 +15,22 @@ Route::get('/', function()
 {
 	return View::make('main');
 });
+
+
+Route::get('/lorem', function()
+{
+	return View::make('lorem');
+});
+
+Route::post('/lorem', function() {
+	return View::make('lorem');
+});
+
+Route::get('/user', function()
+{
+	return View::make('user');
+});
+
+Route::post('/user', function() {
+	return View::make('user');
+});
